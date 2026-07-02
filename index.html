@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bean Run — Endless Arcade Runner</title>
+  <meta name="description" content="Bean Run is an endless arcade runner built with Python & Pygame. Dodge danger, survive longer, and beat your high score. Free to download." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Bean Run — Endless Arcade Runner" />
+  <meta property="og:description" content="Dodge danger, survive longer, beat your high score." />
+  <meta property="og:image" content="assets/main.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated particle background (canvas) -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__brand" aria-label="Bean Run home">
+        <span class="nav__logo">🫘</span>
+        <span class="nav__name">BEAN&nbsp;RUN</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#about">About</a>
+        <a href="#download">Download</a>
+      </nav>
+
+      <div class="nav__actions">
+        <!-- Background music toggle (uses music.mp3) -->
+        <button id="musicToggle" class="music-btn" aria-pressed="false" aria-label="Toggle background music" title="Toggle music">
+          <span class="music-btn__icon">♪</span>
+        </button>
+        <a href="https://drive.usercontent.google.com/download?id=17ylqFww73gVh3J8i7e-bBWR9Tp3RyLLY&export=download&authuser=0" class="btn btn--mini" rel="noopener">Play Free</a>
+        <button id="navToggle" class="nav__burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <!-- Parallax background layer -->
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__inner container">
+        <div class="hero__content reveal" data-reveal="up">
+          <span class="hero__badge">
+            <span class="pulse-dot"></span> Indie Arcade Runner · v1.0
+          </span>
+
+          <h1 class="hero__title">
+            <span class="hero__title-line">BEAN</span>
+            <span class="hero__title-line hero__title-accent">RUN</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            An endless runner inspired by classic arcade gameplay.
+            Dodge danger, survive longer, beat your high score.
+          </p>
+
+          <div class="hero__cta">
+            <a href="https://drive.usercontent.google.com/download?id=17ylqFww73gVh3J8i7e-bBWR9Tp3RyLLY&export=download&authuser=0" class="btn btn--primary ripple" data-glow rel="noopener">
+              <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/>
+              </svg>
+              <span>Download Game</span>
+            </a>
+
+            <a href="Downloads/PYLITE%20GAME.zip" download class="btn btn--glass ripple">
+              <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/>
+              </svg>
+              <span>Download Python Source</span>
+            </a>
+          </div>
+
+          <ul class="hero__stats">
+            <li><strong>∞</strong><span>Endless Levels</span></li>
+            <li><strong>100%</strong><span>Free</span></li>
+            <li><strong>Open</strong><span>Source</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art reveal" data-reveal="right">
+          <div class="hero__art-glow"></div>
+          <img src="assets/main.png" alt="Bean Run gameplay character" class="hero__img floating" width="520" height="520" />
+        </div>
+      </div>
+
+      <a href="#features" class="hero__scroll" aria-label="Scroll to features">
+        <span class="mouse"></span>
+      </a>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="up">
+          <span class="eyebrow">What's inside</span>
+          <h2 class="section__title">Game Features</h2>
+          <p class="section__lead">Simple to pick up, tough to master — everything a great arcade runner needs.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card feature-card reveal" data-reveal="up" style="--d:0ms">
+            <div class="feature-card__icon">⚡</div>
+            <h3>Endless Runner</h3>
+            <p>Fast, reactive gameplay that never ends. The longer you last, the harder it gets.</p>
+          </article>
+
+          <article class="card feature-card reveal" data-reveal="up" style="--d:80ms">
+            <div class="feature-card__icon">🎵</div>
+            <h3>Background Music</h3>
+            <p>An arcade soundtrack that keeps the adrenaline pumping through every run.</p>
+          </article>
+
+          <article class="card feature-card reveal" data-reveal="up" style="--d:160ms">
+            <div class="feature-card__icon">💀</div>
+            <h3>Dangerous Obstacles</h3>
+            <p>Split-second dodges and deadly hazards that punish every hesitation.</p>
+          </article>
+
+          <article class="card feature-card reveal" data-reveal="up" style="--d:240ms">
+            <div class="feature-card__icon">🎯</div>
+            <h3>High Score Challenge</h3>
+            <p>Chase your personal best and prove you've got the fastest reflexes.</p>
+          </article>
+
+          <article class="card feature-card reveal" data-reveal="up" style="--d:320ms">
+            <div class="feature-card__icon">🕹️</div>
+            <h3>Beginner Python Project</h3>
+            <p>Clean, readable Pygame code — perfect for learning how games are built.</p>
+          </article>
+
+          <article class="card feature-card feature-card--cta reveal" data-reveal="up" style="--d:400ms">
+            <div class="feature-card__icon">🚀</div>
+            <h3>Ready in Seconds</h3>
+            <p>No complex setup. Extract, run the installer, and start playing instantly.</p>
+            <a href="#download" class="feature-card__link">Get it now →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREENSHOTS ============ -->
+    <section class="section screenshots" id="screenshots">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="up">
+          <span class="eyebrow">Take a look</span>
+          <h2 class="section__title">Screenshots</h2>
+          <p class="section__lead">Click any image to view it up close.</p>
+        </div>
+
+        <div class="gallery">
+          <button class="shot reveal" data-reveal="up" data-full="assets/start.png" style="--d:0ms">
+            <img src="assets/start.png" alt="Bean Run start screen" loading="lazy" />
+            <span class="shot__caption">Start Screen</span>
+          </button>
+
+          <button class="shot reveal" data-reveal="up" data-full="assets/main.png" style="--d:80ms">
+            <img src="assets/main.png" alt="Bean Run main gameplay" loading="lazy" />
+            <span class="shot__caption">Gameplay</span>
+          </button>
+
+          <button class="shot reveal" data-reveal="up" data-full="assets/Danger.png" style="--d:160ms">
+            <img src="assets/Danger.png" alt="Bean Run danger obstacle" loading="lazy" />
+            <span class="shot__caption">Danger!</span>
+          </button>
+
+          <button class="shot reveal" data-reveal="up" data-full="assets/Game over.png" style="--d:240ms">
+            <img src="assets/Game over.png" alt="Bean Run game over screen" loading="lazy" />
+            <span class="shot__caption">Game Over</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__art reveal" data-reveal="right">
+          <div class="card about__frame">
+            <img src="assets/start.png" alt="Bean Run title art" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about__content reveal" data-reveal="up">
+          <span class="eyebrow">About the game</span>
+          <h2 class="section__title">Built for fun, made to learn</h2>
+          <p>
+            <strong>Bean Run</strong> is a lovingly crafted endless arcade runner written in
+            <strong>Python</strong> using the <strong>Pygame</strong> library. It started as a
+            fun weekend project and grew into a fast, addictive little game about reflexes,
+            timing, and chasing that next high score.
+          </p>
+          <p>
+            The entire project is <strong>open source</strong> and intentionally
+            <strong>beginner friendly</strong>. Every mechanic — the movement, the obstacles,
+            the scoring, the music — is written in clean, readable code so you can learn from it,
+            tweak it, and make it your own.
+          </p>
+
+          <ul class="about__tags">
+            <li>🐍 Python</li>
+            <li>🎮 Pygame</li>
+            <li>🌱 Beginner Friendly</li>
+            <li>📖 Open Source</li>
+            <li>✨ Fun Project</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOWNLOAD ============ -->
+    <section class="section download" id="download">
+      <div class="container">
+        <div class="download__panel card reveal" data-reveal="up">
+          <div class="download__head">
+            <span class="eyebrow">Get started</span>
+            <h2 class="section__title">Download Bean Run</h2>
+            <p class="section__lead">Choose the package that fits you — play it, or learn from it.</p>
+          </div>
+
+          <div class="download__grid">
+            <div class="download__item">
+              <div class="download__item-icon">🎮</div>
+              <h3>Download Game</h3>
+              <p>
+                Includes everything required to play. No setup required other than
+                extracting the package and running the installer included inside.
+              </p>
+              <a href="https://drive.usercontent.google.com/download?id=17ylqFww73gVh3J8i7e-bBWR9Tp3RyLLY&export=download&authuser=0" class="btn btn--primary ripple" data-glow rel="noopener">
+                <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span>Download Game (.zip)</span>
+              </a>
+            </div>
+
+            <div class="download__divider" aria-hidden="true"><span>or</span></div>
+
+            <div class="download__item">
+              <div class="download__item-icon">🐍</div>
+              <h3>Download Source Code</h3>
+              <p>
+                Contains the complete Python / Pygame project for learning and modification.
+                Dig into the code, remix the mechanics, and build your own version.
+              </p>
+              <a href="Downloads/PYLITE%20GAME.zip" download class="btn btn--glass ripple">
+                <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/>
+                </svg>
+                <span>Download Source (.zip)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo">🫘</span>
+        <span class="nav__name">BEAN&nbsp;RUN</span>
+      </div>
+      <p class="footer__made">Made with <span class="heart">❤</span> using Python &amp; Pygame.</p>
+      <p class="footer__copy">Copyright © 2026 · Bean Run</p>
+    </div>
+  </footer>
+
+  <!-- ============ IMAGE MODAL ============ -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Screenshot preview">
+    <button class="modal__close" id="modalClose" aria-label="Close preview">&times;</button>
+    <img class="modal__img" id="modalImg" src="" alt="Screenshot preview" />
+  </div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" src="assets/music.mp3" loop preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
