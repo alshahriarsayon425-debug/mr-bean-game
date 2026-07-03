@@ -339,6 +339,84 @@ h1, h2, h3 { font-family: "Sora", "Inter", sans-serif; line-height: 1.1; letter-
 .about__tags li:hover { transform: translateY(-3px); border-color: var(--blue-bright); }
 
 /* =========================================================
+   CONTACT
+   (glassmorphism card — reuses shared .card + theme tokens)
+   ========================================================= */
+.contact__card {
+  max-width: 460px;
+  margin-inline: auto;
+  padding: clamp(34px, 5vw, 48px) clamp(26px, 5vw, 44px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .4s var(--ease), border-color .4s, box-shadow .4s;
+}
+.contact__card::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(30rem 20rem at 50% -20%, rgba(47,107,255,.20), transparent 65%);
+  pointer-events: none;
+}
+.contact__card:hover { transform: translateY(-6px); border-color: rgba(61,130,255,.35); box-shadow: 0 30px 60px -28px rgba(47,107,255,.5); }
+.contact__card > * { position: relative; z-index: 1; }
+
+.contact__avatar {
+  width: 76px; height: 76px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 2.1rem;
+  background: linear-gradient(140deg, rgba(61,130,255,.24), rgba(70,214,255,.10));
+  border: 1px solid rgba(61,130,255,.3);
+  box-shadow: var(--shadow-glow);
+}
+.contact__name { font-size: 1.5rem; font-weight: 800; }
+
+.contact__edu { color: var(--text-dim); font-size: 1rem; line-height: 1.5; }
+.contact__edu dd { margin: 0; }
+.contact__edu dd:first-of-type { color: var(--text); font-weight: 600; }
+
+/* WhatsApp button — reuses .btn (ripple handled by shared .ripple JS) */
+.wa-btn {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #25d366 0%, #1ebe57 55%, #128c7e 100%);
+  color: #fff;
+  box-shadow: 0 10px 34px -10px rgba(37, 211, 102, .6);
+}
+.wa-btn::after {
+  content: ""; position: absolute; inset: -2px; border-radius: inherit; z-index: -1;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  filter: blur(16px); opacity: .5;
+  transition: opacity .3s; animation: glowPulse 2.8s ease-in-out infinite;
+}
+.wa-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 44px -8px rgba(37, 211, 102, .8); }
+.wa-btn:hover::after { opacity: .85; }
+.wa-btn:active { transform: translateY(-1px) scale(.99); }
+.wa-btn__icon { flex-shrink: 0; }
+/* WhatsApp ripple tint (shared JS creates .ripple__wave) */
+.wa-btn .ripple__wave { background: rgba(255, 255, 255, .5); }
+
+.contact__phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: "Sora", sans-serif; font-weight: 600; font-size: 1.05rem;
+  color: var(--text); letter-spacing: .02em;
+  padding: 8px 16px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--stroke);
+  transition: transform .3s var(--ease), border-color .3s, color .3s;
+}
+.contact__phone:hover { transform: translateY(-2px); border-color: #25d366; color: #eafff2; }
+.contact__phone-icon { font-size: 1rem; }
+
+/* Screen-reader-only helper (accessibility) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
+  white-space: nowrap; border: 0;
+}
+
+/* =========================================================
    DOWNLOAD
    ========================================================= */
 .download__panel { padding: clamp(34px, 5vw, 66px); position: relative; overflow: hidden; }
@@ -376,12 +454,27 @@ h1, h2, h3 { font-family: "Sora", "Inter", sans-serif; line-height: 1.1; letter-
    FOOTER
    ========================================================= */
 .footer { border-top: 1px solid var(--stroke); padding-block: 46px; margin-top: 20px; background: rgba(6,9,18,.5); }
-.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
 .footer__brand { display: flex; align-items: center; gap: 10px; font-family: "Sora", sans-serif; font-weight: 800; letter-spacing: .04em; }
-.footer__made { color: var(--text-dim); }
-.footer__made .heart { color: #ff5a7a; display: inline-block; animation: beat 1.6s ease-in-out infinite; }
-@keyframes beat { 0%,100% { transform: scale(1); } 20% { transform: scale(1.25); } 40% { transform: scale(1); } }
-.footer__copy { color: var(--text-faint); font-size: .88rem; }
+
+.footer__credit { color: var(--text-dim); }
+.footer__credit strong { color: var(--text); font-weight: 600; }
+
+.footer__tech { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer__tech-label { font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--text-faint); }
+.footer__stack { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.footer__stack li {
+  font-size: .84rem; font-weight: 600; color: var(--text-dim);
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--stroke);
+  transition: transform .3s var(--ease), border-color .3s, color .3s;
+}
+.footer__stack li:hover { transform: translateY(-2px); border-color: var(--blue-bright); color: var(--text); }
+
+.footer__powered { color: var(--text-dim); font-size: .94rem; max-width: 30rem; }
+.footer__powered strong { color: var(--blue-bright); font-weight: 600; }
+
+.footer__copy { color: var(--text-faint); font-size: .88rem; margin-top: 4px; }
 
 /* =========================================================
    IMAGE MODAL

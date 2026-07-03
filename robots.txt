@@ -1,0 +1,15 @@
+# robots.txt for Bean Run — https://mr-bean-run.vercel.app
+# Endless arcade runner built with Python & Pygame
+
+User-agent: *
+Allow: /
+
+# Well-behaved crawlers get full access to public assets
+Allow: /assets/
+Allow: /Downloads/
+
+# Sitemap reference
+Sitemap: https://mr-bean-run.vercel.app/sitemap.xml
+
+# Host
+Host: https://mr-bean-run.vercel.app

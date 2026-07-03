@@ -3,24 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bean Run — Endless Arcade Runner</title>
-  <meta name="description" content="Bean Run is an endless arcade runner built with Python & Pygame. Dodge danger, survive longer, and beat your high score. Free to download." />
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+  <!-- ============ PRIMARY SEO META ============ -->
+  <title>Bean Run — Endless Arcade Runner | Free Python &amp; Pygame Game</title>
+  <meta name="description" content="Bean Run is a free endless arcade runner made with Python and Pygame — a fun, Mr Bean inspired casual runner. Dodge danger, survive longer, and beat your high score. Download the Windows game or the open-source Python code." />
+  <meta name="keywords" content="Bean Run, Bean Run Game, Bean Runner, Python Game, Pygame Game, Endless Runner, Arcade Runner, Free PC Game, Mr Bean Inspired Runner, Mr Bean Style Game, Casual Endless Runner, open source game" />
+  <meta name="author" content="Al Shahriar Sayon" />
+  <meta name="creator" content="Al Shahriar Sayon" />
+  <meta name="publisher" content="Bean Run" />
+  <meta name="application-name" content="Bean Run" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="rating" content="General" />
+  <meta name="theme-color" content="#060912" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
 
-  <!-- Open Graph / social preview -->
-  <meta property="og:title" content="Bean Run — Endless Arcade Runner" />
-  <meta property="og:description" content="Dodge danger, survive longer, beat your high score." />
-  <meta property="og:image" content="assets/main.png" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mr-bean-run.vercel.app/" />
+
+  <!-- ============ FAVICONS / ICONS ============ -->
+  <link rel="icon" href="/assets/icon.ico" sizes="any" />
+  <link rel="icon" type="image/x-icon" href="/assets/icon.ico" />
+  <link rel="shortcut icon" href="/assets/icon.ico" />
+  <link rel="apple-touch-icon" href="/assets/icon.ico" />
+  <link rel="mask-icon" href="/assets/icon.ico" color="#3d82ff" />
+
+  <!-- Web app manifests -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Microsoft Tile -->
+  <meta name="msapplication-TileColor" content="#060912" />
+  <meta name="msapplication-TileImage" content="/assets/icon.ico" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+
+  <!-- ============ OPEN GRAPH (Facebook · Discord · LinkedIn) ============ -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bean Run" />
+  <meta property="og:title" content="Bean Run — Endless Arcade Runner | Free Python &amp; Pygame Game" />
+  <meta property="og:description" content="A free, Mr Bean inspired endless arcade runner built with Python &amp; Pygame. Dodge danger, survive longer, beat your high score." />
+  <meta property="og:url" content="https://mr-bean-run.vercel.app/" />
+  <meta property="og:image" content="https://mr-bean-run.vercel.app/assets/main.png" />
+  <meta property="og:image:secure_url" content="https://mr-bean-run.vercel.app/assets/main.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bean Run — endless arcade runner gameplay art" />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Fonts -->
+  <!-- ============ TWITTER / X CARD ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bean Run — Endless Arcade Runner | Free Python &amp; Pygame Game" />
+  <meta name="twitter:description" content="A free, Mr Bean inspired endless arcade runner built with Python &amp; Pygame. Dodge danger, survive longer, beat your high score." />
+  <meta name="twitter:image" content="https://mr-bean-run.vercel.app/assets/main.png" />
+  <meta name="twitter:image:alt" content="Bean Run — endless arcade runner gameplay art" />
+
+  <!-- ============ PERFORMANCE HINTS ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="assets/bg.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/main.png" fetchpriority="high" />
+  <link rel="preload" as="style" href="style.css" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://mr-bean-run.vercel.app/#website",
+        "url": "https://mr-bean-run.vercel.app/",
+        "name": "Bean Run",
+        "description": "Free endless arcade runner built with Python and Pygame — a Mr Bean inspired casual runner game.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://mr-bean-run.vercel.app/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://mr-bean-run.vercel.app/#organization",
+        "name": "Bean Run",
+        "url": "https://mr-bean-run.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mr-bean-run.vercel.app/assets/icon.ico"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Al Shahriar Sayon"
+        }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://mr-bean-run.vercel.app/#game",
+        "name": "Bean Run",
+        "alternateName": ["Bean Runner", "Bean Run Game", "Mr Bean Runner"],
+        "url": "https://mr-bean-run.vercel.app/",
+        "description": "Bean Run is a free, Mr Bean inspired endless arcade runner built with Python and Pygame. Dodge danger, survive longer, and beat your high score.",
+        "image": "https://mr-bean-run.vercel.app/assets/main.png",
+        "screenshot": [
+          "https://mr-bean-run.vercel.app/assets/start.png",
+          "https://mr-bean-run.vercel.app/assets/main.png",
+          "https://mr-bean-run.vercel.app/assets/Danger.png",
+          "https://mr-bean-run.vercel.app/assets/Game%20over.png"
+        ],
+        "genre": ["Arcade", "Endless Runner", "Casual", "Indie"],
+        "gamePlatform": ["PC", "Windows"],
+        "operatingSystem": "Windows",
+        "applicationCategory": "GameApplication",
+        "playMode": "SinglePlayer",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "name": "Al Shahriar Sayon" },
+        "publisher": { "@id": "https://mr-bean-run.vercel.app/#organization" },
+        "softwareVersion": "1.0",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mr-bean-run.vercel.app/#download"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://mr-bean-run.vercel.app/#software",
+        "name": "Bean Run",
+        "operatingSystem": "Windows",
+        "applicationCategory": "GameApplication",
+        "softwareVersion": "1.0",
+        "downloadUrl": "https://mr-bean-run.vercel.app/#download",
+        "fileFormat": "application/zip",
+        "programmingLanguage": "Python",
+        "description": "Free endless arcade runner for Windows built with Python and Pygame. Download the ready-to-play game or the open-source Python source code.",
+        "author": { "@type": "Person", "name": "Al Shahriar Sayon" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://mr-bean-run.vercel.app/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mr-bean-run.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://mr-bean-run.vercel.app/#features" },
+          { "@type": "ListItem", "position": 3, "name": "Screenshots", "item": "https://mr-bean-run.vercel.app/#screenshots" },
+          { "@type": "ListItem", "position": 4, "name": "About", "item": "https://mr-bean-run.vercel.app/#about" },
+          { "@type": "ListItem", "position": 5, "name": "Download", "item": "https://mr-bean-run.vercel.app/#download" },
+          { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://mr-bean-run.vercel.app/#contact" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -40,6 +182,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="#about">About</a>
         <a href="#download">Download</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav__actions">
@@ -47,7 +190,7 @@
         <button id="musicToggle" class="music-btn" aria-pressed="false" aria-label="Toggle background music" title="Toggle music">
           <span class="music-btn__icon">♪</span>
         </button>
-        <a href="https://mega.nz/file/xd0n3I4A#4ooSatljnkXwECrSktb1KeLJcZ2_J_7GzlfDALbh_UU" class="btn btn--mini" rel="noopener">Play Free</a>
+        <a href="https://mega.nz/file/xd0n3I4A#4ooSatljnkXwECrSktb1KeLJcZ2_J_7GzlfDALbh_UU" class="btn btn--mini" target="_blank" rel="noopener noreferrer">Play Free</a>
         <button id="navToggle" class="nav__burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -79,7 +222,7 @@
           </p>
 
           <div class="hero__cta">
-            <a href="https://mega.nz/file/xd0n3I4A#4ooSatljnkXwECrSktb1KeLJcZ2_J_7GzlfDALbh_UU" class="btn btn--primary ripple" data-glow rel="noopener">
+            <a href="https://mega.nz/file/xd0n3I4A#4ooSatljnkXwECrSktb1KeLJcZ2_J_7GzlfDALbh_UU" class="btn btn--primary ripple" data-glow target="_blank" rel="noopener noreferrer">
               <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
                 <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/>
               </svg>
@@ -103,7 +246,7 @@
 
         <div class="hero__art reveal" data-reveal="right">
           <div class="hero__art-glow"></div>
-          <img src="assets/main.png" alt="Bean Run gameplay character" class="hero__img floating" width="520" height="520" />
+          <img src="assets/main.png" alt="Bean Run gameplay — the bean character running and dodging obstacles in this Python and Pygame endless arcade runner" class="hero__img floating" width="520" height="520" decoding="async" fetchpriority="high" />
         </div>
       </div>
 
@@ -172,23 +315,23 @@
         </div>
 
         <div class="gallery">
-          <button class="shot reveal" data-reveal="up" data-full="assets/start.png" style="--d:0ms">
-            <img src="assets/start.png" alt="Bean Run start screen" loading="lazy" />
+          <button class="shot reveal" data-reveal="up" data-full="assets/start.png" style="--d:0ms" aria-label="View Bean Run start screen full size">
+            <img src="assets/start.png" alt="Bean Run start screen with the game title and play prompt" loading="lazy" decoding="async" />
             <span class="shot__caption">Start Screen</span>
           </button>
 
-          <button class="shot reveal" data-reveal="up" data-full="assets/main.png" style="--d:80ms">
-            <img src="assets/main.png" alt="Bean Run main gameplay" loading="lazy" />
+          <button class="shot reveal" data-reveal="up" data-full="assets/main.png" style="--d:80ms" aria-label="View Bean Run gameplay full size">
+            <img src="assets/main.png" alt="Bean Run in-game action showing the bean character running past arcade obstacles" loading="lazy" decoding="async" />
             <span class="shot__caption">Gameplay</span>
           </button>
 
-          <button class="shot reveal" data-reveal="up" data-full="assets/Danger.png" style="--d:160ms">
-            <img src="assets/Danger.png" alt="Bean Run danger obstacle" loading="lazy" />
+          <button class="shot reveal" data-reveal="up" data-full="assets/Danger.png" style="--d:160ms" aria-label="View Bean Run danger moment full size">
+            <img src="assets/Danger.png" alt="Bean Run danger moment as the player dodges a deadly obstacle" loading="lazy" decoding="async" />
             <span class="shot__caption">Danger!</span>
           </button>
 
-          <button class="shot reveal" data-reveal="up" data-full="assets/Game over.png" style="--d:240ms">
-            <img src="assets/Game over.png" alt="Bean Run game over screen" loading="lazy" />
+          <button class="shot reveal" data-reveal="up" data-full="assets/Game over.png" style="--d:240ms" aria-label="View Bean Run game over screen full size">
+            <img src="assets/Game over.png" alt="Bean Run game over screen displaying the final high score" loading="lazy" decoding="async" />
             <span class="shot__caption">Game Over</span>
           </button>
         </div>
@@ -196,37 +339,88 @@
     </section>
 
     <!-- ============ ABOUT ============ -->
-    <section class="section about" id="about">
+    <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about__grid">
         <div class="about__art reveal" data-reveal="right">
           <div class="card about__frame">
-            <img src="assets/start.png" alt="Bean Run title art" loading="lazy" />
+            <img src="assets/start.png" alt="Bean Run title art from the Python and Pygame endless arcade runner" loading="lazy" decoding="async" width="960" height="720" />
           </div>
         </div>
 
         <div class="about__content reveal" data-reveal="up">
-          <span class="eyebrow">About the game</span>
-          <h2 class="section__title">Built for fun, made to learn</h2>
+          <span class="eyebrow">About the developer</span>
+          <h2 class="section__title" id="about-title">About the Developer</h2>
           <p>
-            <strong>Bean Run</strong> is a lovingly crafted endless arcade runner written in
-            <strong>Python</strong> using the <strong>Pygame</strong> library. It started as a
-            fun weekend project and grew into a fast, addictive little game about reflexes,
-            timing, and chasing that next high score.
+            Hi, I'm <strong>Al Shahriar Sayon</strong> — the developer behind <strong>Bean Run</strong>,
+            a personal indie game project I built out of curiosity and a genuine love for games.
+            I wrote the core game logic and the complete <strong>Python / Pygame</strong> source
+            code myself, shaping how the game plays, feels, and comes together.
           </p>
           <p>
-            The entire project is <strong>open source</strong> and intentionally
-            <strong>beginner friendly</strong>. Every mechanic — the movement, the obstacles,
-            the scoring, the music — is written in clean, readable code so you can learn from it,
-            tweak it, and make it your own.
+            Along the way, I used <strong>OpenAI ChatGPT</strong> and <strong>Claude Code</strong>
+            as helping hands to sharpen the application architecture, the launcher and installer,
+            this website, and the overall UI/UX — as well as optimization, debugging, and deployment.
+            Bean Run was built for three simple reasons: to learn, to create, and to share something
+            with the community.
+          </p>
+          <p>
+            I'm currently a <strong>2nd Semester</strong> student in the
+            <strong>Computer Science &amp; Technology (CST)</strong> department at
+            <strong>Dhaka Polytechnic Institute</strong>. My goal is to keep growing in software
+            and game development by building real projects — one idea at a time.
           </p>
 
           <ul class="about__tags">
             <li>🐍 Python</li>
             <li>🎮 Pygame</li>
-            <li>🌱 Beginner Friendly</li>
+            <li>🎓 CST Student</li>
+            <li>🚀 Indie Developer</li>
             <li>📖 Open Source</li>
-            <li>✨ Fun Project</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="up">
+          <span class="eyebrow">Get in touch</span>
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__lead">Have a question, some feedback, or just want to say hi? Let's talk.</p>
+        </div>
+
+        <div class="contact__card card reveal" data-reveal="up" role="group" aria-label="Developer contact details">
+          <div class="contact__avatar" aria-hidden="true">🫘</div>
+
+          <h3 class="contact__name">Al Shahriar Sayon</h3>
+
+          <dl class="contact__edu">
+            <dt class="visually-hidden">Field of study</dt>
+            <dd>Computer Science &amp; Technology (CST)</dd>
+            <dt class="visually-hidden">Semester</dt>
+            <dd>2nd Semester</dd>
+            <dt class="visually-hidden">Institute</dt>
+            <dd>Dhaka Polytechnic Institute</dd>
+          </dl>
+
+          <a
+            href="https://wa.me/8801893134718"
+            class="btn wa-btn ripple"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with Al Shahriar Sayon on WhatsApp (opens in a new tab)"
+          >
+            <svg class="wa-btn__icon" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.59 4.462 1.712 6.41L3.2 28.8l6.57-1.723a12.74 12.74 0 0 0 6.233 1.613h.005c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.332-6.635-3.752-9.056A12.72 12.72 0 0 0 16.003 3.2Zm0 23.36h-.004a10.6 10.6 0 0 1-5.4-1.48l-.387-.23-4.003 1.05 1.068-3.903-.252-.4a10.56 10.56 0 0 1-1.62-5.6c0-5.867 4.774-10.64 10.645-10.64a10.57 10.57 0 0 1 7.52 3.122 10.55 10.55 0 0 1 3.116 7.524c0 5.868-4.773 10.641-10.68 10.641Zm5.84-7.968c-.32-.16-1.893-.934-2.187-1.04-.293-.107-.507-.16-.72.16-.213.32-.826 1.04-1.013 1.253-.187.213-.373.24-.693.08-.32-.16-1.35-.498-2.573-1.588-.951-.848-1.593-1.896-1.78-2.216-.187-.32-.02-.493.14-.652.144-.144.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.72-1.735-.987-2.375-.26-.624-.524-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.669 0 1.574 1.147 3.095 1.307 3.308.16.213 2.253 3.44 5.46 4.826.763.33 1.358.527 1.822.674.766.244 1.463.21 2.014.127.614-.092 1.893-.774 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.134-.293-.213-.613-.373Z"/>
+            </svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+
+          <a class="contact__phone" href="https://wa.me/8801893134718" target="_blank" rel="noopener noreferrer" aria-label="Phone number, plus eight eight zero one eight nine three one three four seven one eight">
+            <span class="contact__phone-icon" aria-hidden="true">📱</span>
+            +880 1893 134718
+          </a>
         </div>
       </div>
     </section>
@@ -237,19 +431,20 @@
         <div class="download__panel card reveal" data-reveal="up">
           <div class="download__head">
             <span class="eyebrow">Get started</span>
-            <h2 class="section__title">Download Bean Run</h2>
-            <p class="section__lead">Choose the package that fits you — play it, or learn from it.</p>
+            <h2 class="section__title">Download Bean Run — Free PC Game</h2>
+            <p class="section__lead">A free Windows download that plays fully offline — pick the ready-to-play game or the open-source Python &amp; Pygame project.</p>
           </div>
 
           <div class="download__grid">
             <div class="download__item">
               <div class="download__item-icon">🎮</div>
-              <h3>Download Game</h3>
+              <h3>Windows Game Download</h3>
               <p>
-                Includes everything required to play. No setup required other than
-                extracting the package and running the installer included inside.
+                The complete Bean Run game for Windows PC — free to download and fully
+                playable offline. No coding needed: just extract the .zip and run the
+                included installer to start playing in seconds.
               </p>
-              <a href="https://drive.usercontent.google.com/download?id=17ylqFww73gVh3J8i7e-bBWR9Tp3RyLLY&export=download&authuser=0" class="btn btn--primary ripple" data-glow rel="noopener">
+              <a href="https://mega.nz/file/xd0n3I4A#4ooSatljnkXwECrSktb1KeLJcZ2_J_7GzlfDALbh_UU" class="btn btn--primary ripple" data-glow target="_blank" rel="noopener noreferrer">
                 <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
                   <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/>
                 </svg>
@@ -261,10 +456,11 @@
 
             <div class="download__item">
               <div class="download__item-icon">🐍</div>
-              <h3>Download Source Code</h3>
+              <h3>Python Source Code</h3>
               <p>
-                Contains the complete Python / Pygame project for learning and modification.
-                Dig into the code, remix the mechanics, and build your own version.
+                The full open-source Python and Pygame project — perfect for learning how an
+                endless runner is built. Read the code, remix the mechanics, and make your
+                own version. Great for students and beginner game developers.
               </p>
               <a href="Downloads/PYLITE%20GAME.zip" download class="btn btn--glass ripple">
                 <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -280,13 +476,33 @@
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="footer">
+  <footer class="footer" aria-label="Site footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="nav__logo">🫘</span>
         <span class="nav__name">BEAN&nbsp;RUN</span>
       </div>
-      <p class="footer__made">Made with <span class="heart">❤</span> using Python &amp; Pygame.</p>
+
+      <p class="footer__credit">
+        Designed &amp; Developed by <strong>Al Shahriar Sayon</strong>
+      </p>
+
+      <div class="footer__tech" aria-label="Built with">
+        <span class="footer__tech-label">Built with</span>
+        <ul class="footer__stack">
+          <li>Python</li>
+          <li>Pygame</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <p class="footer__powered">
+        Application improvements powered by
+        <strong>OpenAI ChatGPT</strong> and <strong>Claude Code</strong>.
+      </p>
+
       <p class="footer__copy">Copyright © 2026 · Bean Run</p>
     </div>
   </footer>

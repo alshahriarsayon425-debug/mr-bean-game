@@ -1,0 +1,41 @@
+{
+  "name": "Bean Run — Endless Arcade Runner",
+  "short_name": "Bean Run",
+  "description": "A free, Mr Bean inspired endless arcade runner built with Python and Pygame. Dodge danger, survive longer, and beat your high score.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#060912",
+  "theme_color": "#060912",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "/assets/icon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/main.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/start.png",
+      "type": "image/png",
+      "label": "Bean Run start screen"
+    },
+    {
+      "src": "/assets/main.png",
+      "type": "image/png",
+      "label": "Bean Run gameplay"
+    }
+  ]
+}

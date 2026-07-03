@@ -1,0 +1,6 @@
+# Security policy for Bean Run — https://mr-bean-run.vercel.app
+# Preferred canonical location: /.well-known/security.txt
+Contact: https://wa.me/8801893134718
+Expires: 2027-07-03T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://mr-bean-run.vercel.app/.well-known/security.txt

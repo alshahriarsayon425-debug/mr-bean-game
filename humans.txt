@@ -1,0 +1,29 @@
+/* TEAM */
+Developer: Al Shahriar Sayon
+Role: Game Developer, Designer & Frontend
+Contact: https://wa.me/8801893134718
+From: Dhaka, Bangladesh
+
+/* EDUCATION */
+Computer Science & Technology (CST), 2nd Semester
+Dhaka Polytechnic Institute
+
+/* THANKS */
+Application improvements powered by OpenAI ChatGPT and Claude Code.
+
+/* SITE */
+Last update: 2026/07/03
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3, JavaScript
+Components: Python, Pygame
+Software: Bean Run — Endless Arcade Runner
+
+                    _
+                   | |
+  __ _  ___   __ _ | |
+ / _` |/ _ \ / _` || |
+| (_| |  __/| (_| ||_|
+ \__,_|\___| \__,_|(_)
+
+Bean Run — run far, dodge danger, beat your high score.
